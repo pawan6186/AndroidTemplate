@@ -1,19 +1,24 @@
 package com.example.pawan.androidtemplate.features;
 
+import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.pawan.androidtemplate.BaseFragment;
 import com.example.pawan.androidtemplate.R;
 import com.example.pawan.androidtemplate.databinding.FragmentHomeBinding;
 import com.example.pawan.androidtemplate.models.Fact;
+import com.example.pawan.androidtemplate.utils.Utilities;
 
 import java.util.List;
 
@@ -32,6 +37,7 @@ public class HomeFragment extends BaseFragment<HomeViewModel> {
         super.onCreate(savedInstanceState);
         getAppComponent().inject(this);
         initViewModel(HomeViewModel.class);
+
     }
 
     @Nullable
@@ -39,15 +45,26 @@ public class HomeFragment extends BaseFragment<HomeViewModel> {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mFragmentHomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
         initViews();
-        mViewModel.getFacts().observe(getViewLifecycleOwner(), new Observer<List<Fact>>() {
-            @Override
-            public void onChanged(@Nullable List<Fact> facts) {
-                if (facts != null) {
-                    mFactAdapter.updateData(facts);
-                }
+        loadData();
+        mViewModel.getError().observe(getViewLifecycleOwner(), error -> {
+            if (!TextUtils.isEmpty(error)) {
+                Activity activity = getActivity();
+                Utilities.showError(activity, error);
             }
         });
+
         return mFragmentHomeBinding.getRoot();
+    }
+
+    private void loadData() {
+        if (Utilities.isOnline(getContext())) {
+            mViewModel.getFacts().observe(getViewLifecycleOwner(), facts -> {
+                loadDataToView(facts);
+                mFragmentHomeBinding.swipeContainer.setRefreshing(false);
+            });
+        } else {
+            Utilities.showError(getActivity(), getString(R.string.not_connected_to_internet));
+        }
     }
 
     private void initViews() {
@@ -57,15 +74,28 @@ public class HomeFragment extends BaseFragment<HomeViewModel> {
         mFragmentHomeBinding.recyclerView.setLayoutManager(layoutManager);
         mFragmentHomeBinding.recyclerView.setHasFixedSize(true);
         mFragmentHomeBinding.recyclerView.setAdapter(mFactAdapter);
-        mFragmentHomeBinding.swipeContainer.setOnRefreshListener(() -> mViewModel.getFacts().observe(getViewLifecycleOwner(), new Observer<List<Fact>>() {
+        mFragmentHomeBinding.swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
-            public void onChanged(@Nullable List<Fact> facts) {
-                if (facts != null) {
-                    mFactAdapter.updateData(facts);
-                }
-                mFragmentHomeBinding.swipeContainer.setRefreshing(false);
+            public void onRefresh() {
+                loadData();
             }
-        }));
+        });
+    }
+
+    private void showData(boolean show) {
+        int visibility = show ? View.GONE : View.VISIBLE;
+        mFragmentHomeBinding.emptyView.setVisibility(visibility);
+    }
+
+    private void loadDataToView(List<Fact> facts) {
+        if (facts != null) {
+            if (facts.size() > 0) {
+                mFactAdapter.updateData(facts);
+                showData(true);
+            } else {
+                showData(false);
+            }
+        }
     }
 }
 
