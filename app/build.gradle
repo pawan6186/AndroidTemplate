@@ -59,7 +59,7 @@ def config = [
         targetSdkVersion : 28,
         minSdkVersion    : 19,
         buildToolsVersion: "27.0.3",
-        apkBaseName      : "LPG_" + getBuildTime() + "_" + getGitCommitHash()
+        apkBaseName      : "App_" + getBuildTime() + "_" + getGitCommitHash()
 ]
 
 android {
