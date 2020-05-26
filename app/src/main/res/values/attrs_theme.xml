@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<attr name="PrimaryTextColor" format="color" />
+	<attr name="SecondaryTextColor" format="color" />
+	<attr name="LightTextColor" format="color" />
+	<attr name="ErrorTextColor" format="color" />
+	<attr name="HintTextColor" format="color" />
+
+	<attr name="PrimarySelector" format="reference" />
+	<attr name="SecondarySelector" format="reference" />
+	<attr name="LightSelector" format="reference" />
+
+	<attr name="FilledButtonBackground" format="reference" />
+	<attr name="FilledThemeButtonBackground" format="reference" />
+	<attr name="OutlineButtonBackground" format="reference" />
+	<attr name="RoundedCornerOutlineButtonBackground" format="reference" />
+	<attr name="BorderlessButtonBackground" format="reference" />
+
+	<attr name="EditTextColor" format="color"/>
+	<attr name="EditTextHintColor" format="color"/>
+
+	<!-- Common -->
+	<attr name="NavigationUpArrow" format="reference" />
+	<attr name="NavigationCloseIcon" format="reference" />
+	<attr name="BottomNavSelector" format="reference"/>
+	<attr name="DividerColor" format="color" />
+	<attr name="ColoredDividerColor" format="color"/>
+	<attr name="SpinnerTextColor" format="color"/>
+	<attr name="IndeterminateProgressColor" format="color"/>
+	<attr name="DisabledButtonTextColor" format="color"/>
+	<attr name="DefaultButtonTextColor" format="color"/>
+	<attr name="NavigationIconColorDark" format="color"/>
+	<attr name="ErrorSnackBarBackgroundColor" format="color"/>
+	<attr name="ErrorSnackBarBarTextColor" format="color"/>
+
+	<!-- Discovery -->
+	<attr name="DiscoveryPassHolderOverlay" format="reference" />
+
+	<!-- Search -->
+	<attr name="SearchAppBarBackgroundColor" format="color" />
+	<attr name="SearchNavigationIconColor" format="color" />
+	<attr name="SearchFieldBackgroundColor" format="color" />
+	<attr name="SearchClearTextIcon" format="reference" />
+	<attr name="SearchClearTextIconColor" format="color" />
+	<attr name="SortNavigationIconColor" format="color" />
+	<attr name="FilterNavigationIconColor" format="color" />
+	<attr name="SearchResultChevronColor" format="color" />
+    <attr name="SearchDivider" format="reference" />
+
+	<!-- See All View -->
+	<attr name="SeeAllIcon" format="reference" />
+	<attr name="SeeAllIconColor" format="color" />
+
+	<!-- Search Toolbar View -->
+	<attr name="SearchToolbarCardColor" format="color" />
+	<attr name="SearchToolbarIcon" format="reference" />
+	<attr name="SearchToolbarIconColor" format="color" />
+	<attr name="SearchToolbarMapIcon" format="reference" />
+
+	<!-- Attractions Toolbar View -->
+	<attr name="AttractionDetailsToolbarColor" format="color"/>
+	<attr name="AttractionDetailsToolbarNoneFavouriteIcon" format="reference"/>
+	<attr name="AttractionDetailsToolbarFavouriteIcon" format="reference"/>
+	<attr name="AttractionDetailsToolbarIconColor" format="color"/>
+
+	<!-- Attractions Details -->
+	<attr name="AttractionDetailsChevronColor" format="color" />
+	<attr name="AttractionDetailsDropDownIcon" format="reference" />
+	<attr name="AttractionDetailsToolBarGradientOverlay" format="reference" />
+
+	<!-- OnBoarding Toolbar View -->
+	<attr name="BuyPassNavigationIconColor" format="color"/>
+
+	<!-- Buy Children Pass View -->
+	<attr name="BuyChildrenPassToolbarColor" format="color"/>
+	<attr name="BuyChildrenPassToolbarTextColor" format="color" />
+	<attr name="BuyChildrenPassNavigationIconColor" format="color" />
+	<attr name="BuyChildrenPassBottomSectionColor" format="color" />
+	<attr name="PassPickerButtonBackground" format="reference" />
+	<attr name="PassPickerSubtitleTextColor" format="color" />
+	<attr name="BuyChildrenPassSelectionDetailsBackgroundColor" format="color" />
+	<attr name="BuyChildrenPassPerforationColor" format="color" />
+	<attr name="PassDurationBackgroundColor" format="color" />
+	<attr name="PassDurationSelectedBackgroundColor" format="color" />
+
+	<!-- Busy Time Chart -->
+	<attr name="BusyTimeChartPeakTimeColor" format="color"/>
+	<attr name="BusyTimeChartNormalTimeColor" format="color"/>
+	<attr name="DatePickerChevronColor" format="color" />
+
+	<!-- Estimate Start Date Calendar -->
+	<attr name="CalendarChevronColor" format="color" />
+	<attr name="CalendarSelectedCellBackground" format="reference" />
+	<attr name="CalendarWithinRangeCellBackground" format="reference" />
+
+	<attr name="BuyPassExtraAddIcon" format="reference"/>
+	<attr name="BuyPassExtraAddIconColor" format="color"/>
+	<attr name="BuyPassExtraRemoveIcon" format="color"/>
+	<attr name="BuyPassExtraRemoveIconColor" format="color"/>
+
+	<attr name="BuyPassActionableTextButtonColor" format="color"/>
+
+	<!-- Confirmation screen -->
+	<attr name="OrderConfirmationScreenBackgroundColor" format="color"/>
+	<attr name="OrderConfirmationScreenIcon" format="reference"/>
+
+	<!-- Pager Indicator -->
+	<attr name="PagerIndicatorIcon" format="reference"/>
+	<attr name="PagerIndicatorSelectedIcon" format="reference"/>
+
+	<!-- Physical Pass -->
+	<attr name="PhysicalPassBackground" format="reference"/>
+	<attr name="PhysicalPassPlaceholderBackground" format="color"/>
+
+	<!-- SelectableImageButton -->
+	<attr name="SelectableImageButtonSelectedContentColor" format="color"/>
+	<attr name="SelectableImageButtonContentColor" format="color"/>
+
+	<!-- Floating Action Button -->
+	<attr name="FloatingActionButtonBackgroundTint" format="color"/>
+	<attr name="FloatingActionButtonForegroundTint" format="color"/>
+
+	<attr name="MapFilterIconColor" format="color"/>
+
+	<attr name="MapFilterSelectedBackgroundColor" format="color"/>
+	<attr name="MapFilterSelectedForegroundColor" format="color"/>
+
+	<attr name="MapFilterNotSelectedBackgroundColor" format="color"/>
+	<attr name="MapFilterNotSelectedForegroundColor" format="color"/>
+
+	<attr name="ShowOnMapBackgroundColor" format="color"/>
+	<attr name="ShowOnMapForegroundColor" format="color"/>
+
+	<!-- Attractions page -->
+	<attr name="AttractionsHomeToolbarColor" format="color"/>
+	<attr name="AttractionsHomeToolbarSearchColor" format="color"/>
+
+    <attr name="AttractionCategoryTextColor" format="color"/>
+
+	<attr name="DisplayCategoryTextColor" format="color"/>
+	<attr name="DisplayCategoryIconColor" format="color"/>
+	<attr name="DisplayCategoryBackIconColor" format="color"/>
+	<attr name="ViewCategoriesToolbarColor" format="color"/>
+
+	<attr name="ViewAttractionsChevronColor" format="color"/>
+	<attr name="ViewAttractionsFilterIconColor" format="color"/>
+	<attr name="ViewAttractionsHeaderOverlay" format="reference"/>
+
+	<!-- No Passes -->
+	<attr name="NoPassesIconColor" format="color"/>
+	<attr name="SyncPassButtonTextColor" format="color"/>
+
+	<!-- Digital Pass Details-->
+	<attr name="DigitalPassBackground" format="reference"/>
+	<attr name="DigitalPassButtonTextColor" format="color"/>
+	<attr name="DigitalPassHelpIconColor" format="color"/>
+
+	<!-- Physical Pass Details-->
+	<attr name="PhysicalPassDetailsIconColor" format="color"/>
+
+	<attr name="AttractionsNoFavouritesIconColor" format="color"/>
+
+	<!-- offers -->
+	<attr name="OffersToolbarBackgroundColor" format="color"/>
+	<attr name="OffersContinueButtonBackground" format="color"/>
+	<attr name="OffersBackButtonColor" format="color"/>
+	<attr name="PassNotReadyIndicatorDrawable" format="reference"/>
+
+	<attr name="OffersAvailableTimeSelectedTextColor" format="color"/>
+	<attr name="OffersAvailableTimeNotSelectedTextColor" format="color"/>
+	<attr name="OffersAvailableTimesBackArrowColor" format="color"/>
+
+	<attr name="OffersContinueButtonTextColor" format="color"/>
+	<attr name="OffersAvailabilityTitleColor" format="color"/>
+
+	<attr name="OffersPercentOffBackgroundColor" format="color"/>
+	<attr name="OffersPercentOffTextColor" format="color"/>
+
+	<attr name="ItemOfferAvailableTimesChevronColor" format="color"/>
+	<attr name="ViewOfferTicketBackgroundColor" format="color"/>
+	<attr name="ViewOfferTicketsBackgroundDottedLineColor" format="color" />
+	<!-- SetInterest -->
+	<attr name="SetInterestCardMaskColor" format="color"/>
+
+	<!-- Help -->
+	<attr name="HelpItemChevronColor" format="color"/>
+
+	<!-- Add Address -->
+	<attr name="AddAddressTitleColor" format="color"/>
+
+	<!-- Data Sync -->
+	<attr name="DataSyncProgressSpinnerBackgroundColor" format="color"/>
+	<attr name="DataSyncProgressSpinnerIndeterminateColor" format="color"/>
+	<attr name="DataSyncProgressBackgroundColor" format="color"/>
+	<attr name="DataSyncProgressColor" format="color"/>
+
+	<!-- Feedback -->
+	<attr name="FeedbackAppBarBackgroundColor" format="color"/>
+	<attr name="FeedbackInputTextHintColor" format="color"/>
+
+	<attr name="PromoCodeAppliedTick" format="reference"/>
+	<attr name="PromoCodeAppliedTickColor" format="color"/>
+
+	<attr name="SuggestedRoutesToolbarColor" format="color"/>
+	<attr name="SuggestedRoutesToolbarTitleColor" format="color"/>
+	<attr name="SuggestedRoutesToolbarBackArrowColor" format="color"/>
+</resources>

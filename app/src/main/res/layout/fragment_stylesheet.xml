@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Heading1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Android Text and Button Stylesheet"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/material_black_delimiter"/>
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Button.Demo.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_small"
+                android:text="Borderless"/>
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Button.Demo.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_small"
+                android:text="Outline"/>
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Button.Demo.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filled"/>
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/Button.Demo.Filled.Theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filled Theme"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Heading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Heading 1"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Heading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Heading 2"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Title"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Title.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Title Secondary"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Subtitle"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Subtitle.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Subtitle Secondary"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Body 1"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Body1.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Body 1 Secondary"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Body1.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Body 1 Error"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Body 2"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Body2.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Body 2 Secondary"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Body2.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Body 2 Error"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 1"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption1.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 1 Secondary"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption1.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 1 Error"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption1.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 1 Small"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption1.Secondary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 1 Secondary Small"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption1.Error.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 1 Error Small"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 2"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption2.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 2 Secondary"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption2.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 2 Error"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption2.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 2 Small"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption2.Secondary.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 2 Secondary Small"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/Text.Demo.Caption2.Error.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_normal"
+                android:text="Caption 2 Error Small"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_normal"
+                android:paddingBottom="@dimen/spacing_normal"
+                android:background="@color/medium_blue"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Heading1.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Heading 1 Light"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Heading2.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Heading 2 Light"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Body1.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Body 1 Light"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Body2.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Body 2 Light"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Caption1.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Caption 1 Light"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Caption1.Light.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Caption 1 Light Small"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Caption2.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Caption 2 Light"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/Text.Demo.Caption2.Light.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="Caption 2 Light Small"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
