@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="white">#FFF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#D4095F</color>
+
+
+    <color name="white_100pc">#FFFFFF</color>
+    <color name="white_25pc">#40FFFFFF</color>
+    <color name="white_40pc">#66FFFFFF</color>
+
+    <color name="purple">#80349A</color>
+    <color name="very_dark_blue">#291D53</color>
+    <color name="very_dark_blue_7pc">#12291D53</color>
+
+    <color name="dark_blue">#1C1970</color>
+    <color name="dark_blue_54pc">#8A1C1970</color>
+    <color name="dark_blue_10pc">#1A1C1970</color>
+
+    <color name="light_grey">#F9F9FA</color>
+    <color name="background_grey">#FAFBFB</color>
+    <color name="black">#000000</color>
+    <color name="medium_grey">#E4E4E8</color>
+
+    <color name="medium_blue">#454560</color>
+    <color name="medium_blue_dark">#150f22</color>
+    <color name="medium_blue_54pc">#8A454560</color>
+    <color name="medium_blue_40pc">#61454560</color>
+    <color name="medium_blue_5pc">#0D454560</color>
+    <color name="medium_blue_25pc">#40454560</color>
+    <color name="medium_blue_20pc">#33454560</color>
+    <color name="medium_blue_10pc">#1A454560</color>
+    <color name="medium_blue_50pc">#80454560</color>
+    <color name="medium_blue_15pc">#26454560</color>
+
+    <color name="aqua">#6AD8CD</color>
+    <color name="aqua_dark">#37706a</color>
+    <color name="aqua_54pc">#8A6AD8CD</color>
+    <color name="aqua_40pc">#616AD8CD</color>
+    <color name="aqua_25pc">#406AD8CD</color>
+
+    <color name="rubine">#D4095F</color>
+    <color name="rubine_dark">#6e0431</color>
+    <color name="rubine_54pc">#8AD4095F</color>
+    <color name="rubine_40pc">#61D4095F</color>
+
+    <color name="error_color">#F5463A</color>
+
+    <color name="hint_text_color">#808080</color>
+
+    <color name="material_white_primary">#FFFFFF</color>
+    <color name="material_white_secondary">#B3FFFFFF</color>
+    <color name="material_white_disabled">#80FFFFFF</color>
+    <color name="material_white_delimiter">#1FFFFFFF</color>
+
+    <color name="material_black_primary">#DE000000</color>
+    <color name="material_black_secondary">#8A000000</color>
+    <color name="material_black_disabled">#61000000</color>
+    <color name="material_black_delimiter">#1F000000</color>
+
+    <color name="material_grey_light">#E0E0E0</color>
+    <color name="material_grey_light_40pc">#61E0E0E0</color>
+    <color name="material_grey_medium">#9E9E9E</color>
+    <color name="material_grey_medium_40pc">#619E9E9E</color>
+    <color name="material_grey_dark">#616161</color>
+    <color name="material_grey_dark_40pc">#61616161</color>
 </resources>

@@ -1,14 +1,11 @@
 package com.example.pawan.androidtemplate.features;
 
-import android.app.Activity;
 import android.arch.lifecycle.Observer;
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +17,7 @@ import com.example.pawan.androidtemplate.databinding.FragmentHomeBinding;
 import com.example.pawan.androidtemplate.models.Fact;
 import com.example.pawan.androidtemplate.utils.Utilities;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 
 import timber.log.Timber;
@@ -27,6 +25,9 @@ import timber.log.Timber;
 public class HomeFragment extends BaseFragment<HomeViewModel> {
     private FragmentHomeBinding mFragmentHomeBinding;
     private FactsAdapter mFactAdapter;
+
+    public static HomeFragment newInstance() {
+    private WeakReference<MainNavigation> mMainNavigation;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -68,6 +69,11 @@ public class HomeFragment extends BaseFragment<HomeViewModel> {
     }
 
     private void initViews() {
+        mFragmentHomeBinding.goToStylesheet.setOnClickListener(view -> {
+            if (mMainNavigation.get() != null) {
+                mMainNavigation.get().navigateToStyleSheet();
+            }
+        });
         mFactAdapter = new FactsAdapter();
         LinearLayoutManager layoutManager = new LinearLayoutManager(mFragmentHomeBinding.recyclerView.getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -95,6 +101,17 @@ public class HomeFragment extends BaseFragment<HomeViewModel> {
             } else {
                 showData(false);
             }
+        }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        if (context instanceof MainNavigation) {
+            mMainNavigation = new WeakReference<>((MainNavigation) context);
+        } else {
+            throw new RuntimeException("Activity is not of type - IMapActivityCallback");
         }
     }
 }

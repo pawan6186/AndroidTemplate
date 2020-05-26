@@ -2,7 +2,6 @@ package com.example.pawan.androidtemplate;
 
 import android.app.Application;
 import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +15,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.pawan.androidtemplate.dependencies.AppComponent;
+import com.example.pawan.androidtemplate.theme.BlackThemeLoader;
+import com.example.pawan.androidtemplate.theme.DefaultThemeLoader;
+import com.example.pawan.androidtemplate.theme.IThemeLoader;
 
 import java.util.Collections;
 import java.util.Set;
@@ -27,7 +29,8 @@ import timber.log.Timber;
 @SuppressWarnings({"unused", "WeakerAccess"})
 public abstract class BaseActivity extends AppCompatActivity {
     private static final String TAG = BaseActivity.class.getSimpleName();
-    protected @Inject ViewModelFactory mViewModelFactory;
+    protected @Inject
+    ViewModelFactory mViewModelFactory;
 
     @AnimRes
     private static final int ENTER_ANIMATION = R.anim.slide_in_from_bottom;
@@ -38,13 +41,22 @@ public abstract class BaseActivity extends AppCompatActivity {
     @AnimRes
     private static final int POP_EXIT_ANIMATION = R.anim.slide_out_to_bottom;
 
+    private IThemeLoader themeProperties;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        if (BuildConfig.THEME.equals(IThemeLoader.THEME.BLACK)) {
+            themeProperties = new BlackThemeLoader();
+        } else {
+            themeProperties = new DefaultThemeLoader();
+        }
+        setTheme(themeProperties.getApplicationThemeId());
         super.onCreate(savedInstanceState);
     }
 
     /**
      * Returns resource id of the view container which fragment(s) need to be replaced.
+     *
      * @return Resource Id.
      */
     protected abstract @IdRes
@@ -76,7 +88,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * Returns the current {@link Fragment} held within the container view ID if one exists.
      *
-     * @return	Current {@link Fragment} instance if one exists
+     * @return Current {@link Fragment} instance if one exists
      */
     @Nullable
     protected Fragment getCurrentFragment() {
@@ -85,7 +97,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /**
      * Returns an array of the animation resources
-     * @return	Array of animation resources
+     *
+     * @return Array of animation resources
      */
     @NonNull
     protected int[] getAnimationIntArray() {
@@ -97,9 +110,9 @@ public abstract class BaseActivity extends AppCompatActivity {
      * with the provided {@link Fragment} instance. It handles checking to ensure that the provided
      * {@link Fragment}is not identical to the current {@link Fragment}, checking bundles if necessary.
      *
-     * @param fragment	{@link Fragment} to load into the container
-     * @param addToBackStack	True if the {@link Fragment} should be added to the activity backstack
-     * @param animate	True if the {@link Fragment} should animate into and out of view
+     * @param fragment       {@link Fragment} to load into the container
+     * @param addToBackStack True if the {@link Fragment} should be added to the activity backstack
+     * @param animate        True if the {@link Fragment} should animate into and out of view
      */
     protected void swapFragment(@NonNull Fragment fragment, boolean addToBackStack, boolean animate) {
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -130,9 +143,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * Returns true if the provided {@link Bundle} objects are equal.
      *
-     * @param args1	{@link Bundle} Arguments to compare
-     * @param args2	{@link Bundle} Arguments to compare
-     * @return	True if both bundles are equivalent, else false
+     * @param args1 {@link Bundle} Arguments to compare
+     * @param args2 {@link Bundle} Arguments to compare
+     * @return True if both bundles are equivalent, else false
      */
     private boolean areBundlesEqual(@Nullable Bundle args1, @Nullable Bundle args2) {
         if (args1 == null && args2 == null) {
@@ -151,17 +164,17 @@ public abstract class BaseActivity extends AppCompatActivity {
         Object valueOne;
         Object valueTwo;
 
-        for(String key : setOne) {
+        for (String key : setOne) {
             valueOne = args1.get(key);
             valueTwo = args2.get(key);
-            if(valueOne instanceof Bundle && valueTwo instanceof Bundle &&
+            if (valueOne instanceof Bundle && valueTwo instanceof Bundle &&
                     !areBundlesEqual((Bundle) valueOne, (Bundle) valueTwo)) {
                 return false;
-            } else if(valueOne == null) {
-                if(valueTwo != null || !args2.containsKey(key)) {
+            } else if (valueOne == null) {
+                if (valueTwo != null || !args2.containsKey(key)) {
                     return false;
                 }
-            } else if(!valueOne.equals(valueTwo)) {
+            } else if (!valueOne.equals(valueTwo)) {
                 return false;
             }
         }
@@ -171,6 +184,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /**
      * Returns true if the current activity is a launcher activity for the application.
+     *
      * @return True if this activity is a launcher
      */
     private boolean isLauncherActivity() {
@@ -186,10 +200,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * Go back to first fragment
      */
-    protected void goBackToFirst(){
+    protected void goBackToFirst() {
         try {
             getSupportFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        } catch (Exception ex){
+        } catch (Exception ex) {
             Timber.e(ex, "Unable to navigate back to first fragment");
         }
     }
@@ -205,7 +219,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public AppComponent getAppComponent() {
         Application app = this.getApplication();
-        if(app instanceof TemplateApp){
+        if (app instanceof TemplateApp) {
             return ((TemplateApp) app).getAppComponent();
         }
 

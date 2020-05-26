@@ -7,7 +7,6 @@ import android.util.Log;
 import com.crashlytics.android.Crashlytics;
 import com.example.pawan.androidtemplate.dependencies.AppComponent;
 import com.example.pawan.androidtemplate.dependencies.DaggerAppComponent;
-import com.example.pawan.androidtemplate.dependencies.modules.AppModule;
 import com.squareup.leakcanary.LeakCanary;
 
 import java.io.PrintWriter;

@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_extra_small">4dp</dimen>
     <dimen name="spacing_small">8dp</dimen>
-    <dimen name="thumbnail_width">144dp</dimen>
-    <dimen name="thumbnail_height">96dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_extra_large">48dp</dimen>
+    <dimen name="spacing_massive">64dp</dimen>
+
+    <dimen name="square_button_size">48dp</dimen>
+
+    <dimen name="component_extra_small">40dp</dimen>
+    <dimen name="component_small">48dp</dimen>
+    <dimen name="component_normal">56dp</dimen>
+    <dimen name="component_large">64dp</dimen>
+    <dimen name="component_extra_large">72dp</dimen>
+
+    <dimen name="default_icon_size">48dp</dimen>
+    <dimen name="default_icon_padding">12dp</dimen>
+
+    <dimen name="corner_radius_normal">8dp</dimen>
+    <dimen name="corner_radius_small">4dp</dimen>
+    <dimen name="corner_radius_button">1dp</dimen>
+    <dimen name="corner_radius_outline_button">2dp</dimen>
+    <dimen name="corner_radius_large_outline_button">24dp</dimen>
+
+
+    <dimen name="stroke_width_outline_button">1dp</dimen>
+    <dimen name="stroke_width_outline_button_large">2dp</dimen>
+    <dimen name="stroke_width_large">2dp</dimen>
+
+    <dimen name="text_size_extra_large">24sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_extra_small">12sp</dimen>
+
+    <dimen name="divider_width">2dp</dimen>
+    <dimen name="divider_height_small">1dp</dimen>
+    <dimen name="divider_height_large">2dp</dimen>
+
 </resources>
