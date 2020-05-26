@@ -39,4 +39,7 @@
     <dimen name="divider_height_small">1dp</dimen>
     <dimen name="divider_height_large">2dp</dimen>
 
+    <dimen name="thumbnail_width">144dp</dimen>
+    <dimen name="thumbnail_height">96dp</dimen>
+
 </resources>

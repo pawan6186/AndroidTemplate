@@ -1,11 +1,15 @@
 package com.example.pawan.androidtemplate.features;
 
+import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +30,6 @@ public class HomeFragment extends BaseFragment<HomeViewModel> {
     private FragmentHomeBinding mFragmentHomeBinding;
     private FactsAdapter mFactAdapter;
 
-    public static HomeFragment newInstance() {
     private WeakReference<MainNavigation> mMainNavigation;
 
     public static HomeFragment newInstance() {
