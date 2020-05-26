@@ -74,6 +74,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+    defaultConfig {
+        buildConfigField "String", 'THEME', "\"Black\""  // Default|Black
+    }
     buildTypes {
         release {
             minifyEnabled true
@@ -86,6 +89,7 @@ android {
             debuggable true
             manifestPlaceholders = [CRASHLYTICS_ENABLED: false]
         }
+
     }
 
     dataBinding {

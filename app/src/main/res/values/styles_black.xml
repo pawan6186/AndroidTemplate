@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="AppTheme.Black">
+
+		<item name="colorPrimary">@color/aqua</item>
+		<item name="colorPrimaryDark">@color/aqua</item>
+		<item name="colorAccent">@color/material_black_primary</item>
+
+		<item name="PrimaryThemeColor">@color/material_black_secondary</item>
+		<item name="PrimaryThemeColorDark">@color/material_black_primary</item>
+		<item name="PrimaryThemeColorLight">@color/material_white_primary</item>
+
+		<item name="PrimaryTextColor">@color/material_black_primary</item>
+		<item name="SecondaryTextColor">@color/material_black_secondary</item>
+		<item name="LightTextColor">@color/material_white_primary</item>
+		<item name="ErrorTextColor">@color/error_color</item>
+		<item name="HintTextColor">@color/hint_text_color</item>
+
+	</style>
+
+</resources>

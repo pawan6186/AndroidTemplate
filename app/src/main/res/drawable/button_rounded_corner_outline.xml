@@ -5,7 +5,7 @@
 			<corners android:radius="@dimen/corner_radius_large_outline_button" />
 			<solid android:color="@color/medium_blue_40pc" />
 			<stroke
-				android:color="@color/medium_blue"
+				android:color="?attr/PrimaryThemeColorDark"
 				android:width="@dimen/stroke_width_outline_button" />
 		</shape>
 	</item>
@@ -14,7 +14,7 @@
 			<corners android:radius="@dimen/corner_radius_large_outline_button" />
 			<solid android:color="@color/medium_blue_40pc"/>
 			<stroke
-				android:color="@color/medium_blue"
+				android:color="?attr/PrimaryThemeColorDark"
 				android:width="@dimen/stroke_width_outline_button" />
 		</shape>
 	</item>
@@ -23,7 +23,7 @@
 			<corners android:radius="@dimen/corner_radius_large_outline_button" />
 			<solid android:color="@android:color/transparent" />
 			<stroke
-				android:color="@color/medium_blue"
+				android:color="?attr/PrimaryThemeColorDark"
 				android:width="@dimen/stroke_width_outline_button" />
 		</shape>
 	</item>

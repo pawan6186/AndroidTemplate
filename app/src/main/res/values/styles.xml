@@ -10,6 +10,10 @@
         <item name="colorPrimaryDark">@color/material_black_primary</item>
         <item name="colorAccent">@color/material_white_primary</item>
 
+        <item name="PrimaryThemeColor">@color/medium_blue_40pc</item>
+        <item name="PrimaryThemeColorDark">@color/medium_blue</item>
+        <item name="PrimaryThemeColorLight">@color/material_white_primary</item>
+
         <item name="PrimaryTextColor">@color/medium_blue</item>
         <item name="SecondaryTextColor">@color/medium_blue_40pc</item>
         <item name="LightTextColor">@color/material_white_primary</item>
@@ -21,9 +25,9 @@
         <item name="LightSelector">@drawable/default_selector_white</item>
 
         <item name="FilledButtonBackground">@drawable/button_rubine</item>
-        <item name="FilledThemeButtonBackground">@drawable/button_blue</item>
-        <item name="OutlineButtonBackground">@drawable/button_blue_outline</item>
-        <item name="RoundedCornerOutlineButtonBackground">@drawable/button_blue_rounded_corner_outline</item>
+        <item name="FilledThemeButtonBackground">@drawable/button</item>
+        <item name="OutlineButtonBackground">@drawable/button_outline</item>
+        <item name="RoundedCornerOutlineButtonBackground">@drawable/button_rounded_corner_outline</item>
         <item name="BorderlessButtonBackground">@drawable/default_selector_blue</item>
 
         <item name="EditTextColor">@color/medium_blue</item>
