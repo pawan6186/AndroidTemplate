@@ -1,6 +1,6 @@
 package com.example.pawan.androidtemplate.theme;
 
-public interface IThemeProperties {
+public interface IThemeLoader {
     interface THEME {
         String BLACK = "Black";
     }

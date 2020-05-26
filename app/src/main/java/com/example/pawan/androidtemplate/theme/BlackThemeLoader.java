@@ -4,11 +4,11 @@ import android.support.annotation.StyleRes;
 
 import com.example.pawan.androidtemplate.R;
 
-public class DefaultThemeProperties implements IThemeProperties {
+public class BlackThemeLoader implements IThemeLoader {
         @Override
         @StyleRes
         public int getApplicationThemeId() {
-            return R.style.AppTheme;
+            return R.style.AppTheme_Black;
         }
 
 }

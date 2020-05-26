@@ -15,9 +15,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.pawan.androidtemplate.dependencies.AppComponent;
-import com.example.pawan.androidtemplate.theme.BlackThemeProperties;
-import com.example.pawan.androidtemplate.theme.DefaultThemeProperties;
-import com.example.pawan.androidtemplate.theme.IThemeProperties;
+import com.example.pawan.androidtemplate.theme.BlackThemeLoader;
+import com.example.pawan.androidtemplate.theme.DefaultThemeLoader;
+import com.example.pawan.androidtemplate.theme.IThemeLoader;
 
 import java.util.Collections;
 import java.util.Set;
@@ -41,14 +41,14 @@ public abstract class BaseActivity extends AppCompatActivity {
     @AnimRes
     private static final int POP_EXIT_ANIMATION = R.anim.slide_out_to_bottom;
 
-    private IThemeProperties themeProperties;
+    private IThemeLoader themeProperties;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        if (BuildConfig.THEME.equals(IThemeProperties.THEME.BLACK)) {
-            themeProperties = new BlackThemeProperties();
+        if (BuildConfig.THEME.equals(IThemeLoader.THEME.BLACK)) {
+            themeProperties = new BlackThemeLoader();
         } else {
-            themeProperties = new DefaultThemeProperties();
+            themeProperties = new DefaultThemeLoader();
         }
         setTheme(themeProperties.getApplicationThemeId());
         super.onCreate(savedInstanceState);
