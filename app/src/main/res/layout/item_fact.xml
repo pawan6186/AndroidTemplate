@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <data></data>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <data>
+
+        <variable
+            name="fact"
+            type="com.example.pawan.androidtemplate.models.Fact" />
+    </data>
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.constraint.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_normal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/fact_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="@{fact.title}"
+                style="@style/Text.Demo.Body1"
+                app:layout_constraintBottom_toTopOf="@id/fact_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/fact_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginEnd="@dimen/spacing_small"
+                android:text="@{fact.description}"
+                style="@style/Text.Demo.Body2"
+                app:layout_constraintEnd_toStartOf="@id/fact_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fact_title"
+                tools:text="Description" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/fact_image"
+                android:layout_width="@dimen/thumbnail_width"
+                android:layout_height="@dimen/thumbnail_height"
+                android:layout_marginTop="@dimen/spacing_small"
+                app:imageUrl="@{fact.imageHref}"
+                app:layout_constraintTop_toTopOf="@id/fact_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_default_image"
+                android:scaleType="centerCrop"
+                />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
 </layout>
